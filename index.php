@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <title>Gemini Artworks Portfolio</title>
-    <link type="text/css" rel="stylesheet" href="css/Portfolio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  </head>
-  <body>
-
+<?php get_header(); ?>
     <!-- Portfolio title -->
     <header>
       <nav id="nav_bar">
@@ -125,59 +116,8 @@
       </section>
     </main>
     <br><br><br>
-    <footer>
-      <div>
-        <div class="footer">
-          <div id="head">
-            Gemini Artworks
-          </div>
-          <div id="row1">
-            Gallery -
-            <a href="HomeIllustrator.html"
-            style="text-decoration: none;
-            color: white;">
-              Illustrator
-            </a>
-          </div>
-          <div id="row2">
-            Gallery -
-            <a href="HomePhotoshop.html"
-            style="text-decoration: none;
-            color: white;">
-              Photoshop
-            </a>
-          </div>
-          <div id="row3">
-            Gallery -
-            <a href="HomeIndesign.html"
-            style="text-decoration: none;
-            color: white;">
-              Indesign
-            </a>
-          </div>
-          <div id="row1-2">
-            <a href="Contact_Page.html"
-            style="text-decoration: none;
-            color: white;">
-              Contact
-            </a>
-          </div>
-          <div id="row2-2">
-            <a href="About_Me.html"
-            style="text-decoration: none;
-            color: white;">
-              About Me
-            </a>
-          </div>
-          <div id="phone">407-652-8646</div>
-          <div id="email">gonzalezjohnathan8541@gmail.com</div>
-          <div id="insta">@_gemini.artworks</div>
-        </div>
-      </div>
-    </footer>
 
 
 
-    <script type="text/javascript" src="js/menu_external.js"></script>
-  </body>
-</html>
+
+<?php get_footer(); ?>
