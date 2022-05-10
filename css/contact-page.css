@@ -1,0 +1,421 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav_whole {
+  color: white;
+  background: #232328;
+  border-bottom: 1px solid #ffcc00;
+  padding-inline-start: 0px;
+  margin-top: 0px;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+#nav_links {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  right: 0;
+  top: 0px;
+  padding: 10px 20px;
+}
+
+#nav_bar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+}
+
+.right_link {
+  margin-left: 25px;
+}
+
+@keyframes toGrey {
+  0% {
+    background-color: #232328;
+    transition-timing-function: ease;
+  }
+  100% {
+    background-color: dimgrey;
+    padding: 10px;
+    transition-timing-function: ease;
+  }
+}
+
+#selection1 {
+  position: relative;
+}
+
+#selection2 {
+  position: relative;
+}
+
+#selection1 a:hover {
+  animation: toGrey 2s 1;
+}
+
+#selection2 a:hover {
+  animation: toGrey 2s 1;
+}
+
+.icon {
+  display: none;
+}
+
+#logo {
+  color: #ffcc00;
+  font-size: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 22px;
+}
+
+#current {
+  color: #ffcc00;
+}
+
+#current {
+  color: #ffcc00;
+}
+
+main {
+  font-family: times;
+}
+
+header {
+  font-family: times;
+}
+
+body {
+  margin: 0px;
+  background-image: url('../Space_Background.jpg');
+  background-size: 1920px 1080px;
+}
+
+#contact-grid {
+  background-color: #232328;
+  border: 3px groove rgb(0, 155, 155);
+  border-radius: 10px;
+  color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 25px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(30px, auto);
+  grid-template-areas:
+      ". head    ."
+      ". message ."
+      ". name    ."
+      ". email   ."
+      ". phone   ."
+      ". comment ."
+      ". submit  ."
+}
+
+#contact-grid p {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(0, 155, 155);
+  padding-top: 10px;
+  border-top: 1px solid rgb(0, 155, 155);
+}
+
+#submitButton {
+  grid-area: submit;
+}
+
+#submitButton input {
+  background-color: #ffcc00;
+  border: 1px solid #ffcc00;
+  font-size: 16px;
+  font-family: 'helveticaneue', sans-serif;
+  border-radius: 10px;
+  height: 56px;
+  width: 112px;
+  margin-bottom: 30px;
+}
+
+.Input input {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px 0px 20px 0px;
+  height: 30px;
+  width: 300px;
+  font-size: 16px;
+  box-shadow: inset 1px 0px 5px 0px grey;
+  border: 2px solid #ffcc00;
+}
+
+@keyframes submitColor {
+  0% {
+    background-color: #ffcc00;
+    border: 1px solid #ffcc00;
+    cursor: default;
+    color: black;
+  }
+
+  100% {
+    background-color: #232328;
+    border: 2px solid #ffcc00;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+#submitButton input:active {
+  animation: submitColor 0.5s;
+}
+
+#Nameinput {
+  grid-area: name;
+  text-align: center;
+}
+
+#Emailinput {
+  grid-area: email;
+  text-align: center;
+}
+
+#Phoneinput {
+  grid-area: phone;
+  text-align: center;
+}
+
+#comment {
+  grid-area: comment;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0px 20px 0px;
+}
+
+#comment textarea {
+  border-radius: 10px;
+  box-shadow: inset 1px 0px 5px 0px grey;
+  border: 2px solid #ffcc00;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 156px;
+  width: auto;
+}
+
+.footer {
+  background-color: #232328;
+  border-top: 2px solid #ffcc00;
+  font-size: 14px;
+  color: #ffcc00;
+  width: 100%;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-auto-rows: minmax(20px, auto);
+  grid-template-areas:
+      "head head head"
+      "Line1-1 Line1-2 Line1-3"
+      "Line2-1 Line2-2 Line2-3"
+      "Line3-1 Line3-2 Line3-3"
+      "Contact Contact2 Contact3"
+      "Copyright Copyright2 Copyright3";
+  gap: 10px 30px;
+}
+
+#head {
+  grid-area: head;
+  font-size: 24px;
+  border-bottom: 1px solid #232328;
+}
+#row1 {
+  grid-area: Line1-1;
+}
+#row2 {
+  grid-area: Line2-1;
+}
+#row3 {
+  grid-area: Line3-1;
+}
+#row1-2 {
+  grid-area: Line1-2;
+}
+#row2-2 {
+  grid-area: Line2-2;
+}
+#phone {
+  grid-area: Contact2;
+}
+#email {
+  grid-area: Contact;
+}
+#insta {
+  grid-area: Contact3;
+}
+
+@media screen and (max-width: 1500px) {
+  .Input input {
+    height: 30px;
+    width: 302px;
+  }
+
+  #comment textarea {
+    width: auto;
+  }
+
+  #contact-grid {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Input input {
+    height: 30px;
+    width: 200px;
+  }
+
+  #comment textarea {
+    width: auto;
+  }
+
+  #contact-grid {
+    width: 60%;
+    margin: auto;
+    padding: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(30px, auto);
+    grid-template-areas:
+        ". head    ."
+        ". message ."
+        ". name    ."
+        ". email   ."
+        ". phone   ."
+        ". comment ."
+        ". submit  ."
+  }
+
+
+@media screen and (max-width: 750px) {
+  #logo {
+    display: none;
+  }
+
+  .footer {
+    gap: 10px 30px;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr 2fr;
+    font-size: 12px;
+  }
+
+  #contact-grid {
+    width: 75%;
+    margin: auto;
+    padding: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(30px, auto);
+    grid-template-areas:
+        ". head    ."
+        ". message ."
+        ". name    ."
+        ". email   ."
+        ". phone   ."
+        ". comment ."
+        ". submit  ."
+  }
+
+  .Input input {
+    font-size: 12px;
+    height: 20px;
+  }
+
+  #submitButton input {
+    font-size: 14px;
+    height: 32px;
+    width: 68px;
+  }
+
+  #comment textarea {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #contact-grid {
+    margin-top: 30px;
+  }
+
+  #current {
+    padding-left: 20px;
+  }
+
+  #nav_whole {
+    background: #232328;
+    border-bottom: 1px solid #ffcc00;
+    padding-inline-start: 0px;
+    margin-top: 0px;
+  }
+
+  #nav_bar a {
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline;
+  }
+
+  #nav_bar a:hover {
+    background-color: dimgrey;
+  }
+
+  .active {
+    background-color: #232328;
+    color: white;
+  }
+
+  #nav_bar a.icon {
+    background: #232328;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto;
+    width: auto;
+  }
+
+  #nav_bar a.icon:active {
+    background: dimgrey;
+  }
+
+  #nav_links {
+    display: none;
+    padding: 10px 30px;
+  }
+
+  #nav_bar {
+    overflow: hidden;
+    position: fixed;
+  }
+
+  .right_link {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
